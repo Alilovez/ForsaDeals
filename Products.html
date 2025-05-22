@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn and Spend Prediction</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('file:///C:/Users/triki/Downloads/imPp.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);  /* semi-transparent white background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        /* Go Back Button Outside Container, Positioned Top-Right */
+        .go-back-button {
+            background-color: #f44336;  /* Red background for the go back button */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: auto; /* Don't stretch across the full width */
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove underline from link */
+        }
+
+        .go-back-button:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Go Back Button -->
+    <a href="file:///C:/Users/triki/OneDrive/Bureau/Flask%20HTML/home.html" class="go-back-button">Go Back to Home</a>
+
+    <div class="container">
+        <h1>Total Spend Prediction</h1>
+        <form action="#" method="POST">
+            <label for="Year">Year:</label>
+            <input type="text" id="Year" name="Year" required><br>
+
+            <label for="Month">Month:</label>
+            <input type="text" id="Month" name="Month" required><br>
+
+            <label for="Num_Products">Number of Products:</label>
+            <input type="text" id="Num_Products" name="Num_Products" required><br>
+
+            <label for="Avg_Price">Avg Price:</label>
+            <input type="text" id="Avg_Price" name="Avg_Price" required><br>
+
+            <label for="Unique_Categories">Unique Categories:</label>
+            <input type="text" id="Unique_Categories" name="Unique_Categories" required><br>
+
+            <input type="submit" value="Predict Total Spend">
+        </form>
+
+        <div class="footer">
+            <p>Powered by Your App</p>
+        </div>
+    </div>
+
+</body>
+</html>
