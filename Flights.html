@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Spend and Flight Price Prediction</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('file:///C:/Users/triki/OneDrive/Bureau/Flask%20HTML/Flights.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Go Back Button Outside Container, Positioned Top-Right */
+        .go-back-button {
+            background-color: #f44336;  /* Red background for the go back button */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: auto;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove underline from link */
+        }
+
+        .go-back-button:hover {
+            background-color: #e53935;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.7);  /* More transparent background */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0; /* Symmetric margin for spacing */
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        /* Result Section */
+        .result {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .result h2 {
+            color: #333;
+        }
+
+        .result p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Go Back Button -->
+    <a href="file:///C:/Users/triki/OneDrive/Bureau/Flask%20HTML/home.html" class="go-back-button">Go Back to Home</a>
+
+    <div class="container">
+        <h1>Flight Price Prediction</h1>
+        <form action="/" method="POST">
+            <!-- Age Group -->
+            <div class="radio-group">
+                <label>Age Group:</label><br>
+                <input type="radio" name="Age" value="10" required> Child 
+                <input type="radio" name="Age" value="25" required> Adult 
+            </div>
+
+            <label for="Month_Flight">Month:</label>
+            <select id="Month_Flight" name="Month_Flight" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+
+            <!-- Airline Company -->
+            <div class="radio-group">
+                <label>Airline Company:</label><br>
+                <input type="radio" name="Compagnie" value="Tunisair" required> Tunisair
+                <input type="radio" name="Compagnie" value="Nouvelair" required> Nouvelair
+            </div>
+
+            <!-- Location (Country) -->
+            <div class="radio-group">
+                <label>Location (Country):</label><br>
+                <input type="radio" name="Pays" value="France" required> France
+                <input type="radio" name="Pays" value="Italy" required> Italy
+                <input type="radio" name="Pays" value="Turkey" required> Turkey
+                <input type="radio" name="Pays" value="Spain" required> Spain
+            </div>
+
+            <!-- Submit Button -->
+            <input type="submit" name="predict_flight_price" value="Predict Flight Price">
+        </form>
+    </div>
+
+</body>
+</html>
